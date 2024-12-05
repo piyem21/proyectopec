@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="card">
+        <div class="face front">
+            <img src="objetivo.jpg" alt="">
+            <h3>Objetivo</h3>
+        </div>
+        <div class="face back">
+            <h3>Objetivo</h3>
+            <p>Mejorar la calidad de vida y el rendimiento académico de los estudiantes 
+                que tienen problemas de visión, pero no pueden acceder a corrección óptica 
+                por razones económicas.<br>
+                Mejorar el aprendizaje.<br>
+                Promover la salud visual.<br>
+                Reducir el ausentismo y las distracciones.</p>
+                <a href="#">Details</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="cargo.png" alt="">
+            <h3>Responsables</h3>
+        </div>
+        <div class="face back">
+            <h3>Responsables</h3>
+            <p>Nazario Hernández Reyes<br> 
+                Adriana Martínez Esparza </p>
+                <a href="#">Details</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="face front">
+            <img src="proceso.jpg" alt="">
+            <h3>Proceso</h3>
+        </div>
+        <div class="face back">
+            <h3>Proceso</h3>
+            <p>Investigación y planificación.<br>
+                Llenar formulario.<br>
+                Determinar numero de personas.<br>
+                Evaluación de salud visual(examen de vista).<br>
+                Determinar el costo.<br>
+                Realizar actividades para obtener ingresos.<br>
+                Entrega de lentes.</p>
+            <div class="link">
+                <a href="#">Details</a>
+            </div>
+        </div>
+    </div>
+    <script language="javascript" type="text/javascript">
+        var SeceunciaID=null
+        var imagen=0
+        var duracion=5000
+        {imagenes=new CreaArray(8)
+         imagenes[1].src="co1.jpg"
+         imagenes[2].src="co2.jpg"
+         imagenes[3].src="co3.jpg"
+         imagenes[4].src="co4.jpg" 
+         imagenes[5].src="co5.jpg" 
+         imagenes[6].src="co6.jpg" 
+         imagenes[7].src="co7.jpg" 
+         imagenes[8].src="co8.jpg"   
+        }
+        function CreaArray(n){
+         this.length=n
+         for(var i=1;i<=n;i++){
+           this[i]=new Image() 
+         }  
+         return this 
+        }
+        function MostrarSecuencia(){
+         {   
+         document.images["secuencia"].src=imagenes[imagen].src
+         imagen++
+         if(imagen==9){
+          imagen=1
+         }   
+        }
+        SecuenciaID=setTimeout("MostrarSecuencia()",duracion)
+        SecuenciaEjecutandose=true
+       }
+       function IniciarSecuencia(){
+        imagen=1
+        MostrarSecuencia()
+       }
+       </script>
+       <body onload="IniciarSecuencia()">
+        <center><H1>Comic</H1><BR>
+        <p><img src="logo.jpg" id="imagen" alt="Secuencia" name="secuencia"
+         width="750" height="550" border=5></p>    
+    
+</body>
+</html>
